@@ -1,3 +1,26 @@
-<div>
-    <!-- You must be the change you wish to see in the world. - Mahatma Gandhi -->
-</div>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Laravel</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url(asset('build/assets/app-Bzu10ED2.css')) }}">
+    <script src="{{ url(asset('build/assets/app-CAkSn3BF.js')) }}"></script>
+</head>
+
+<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+    @include('layouts.header')
+    <main class="mt-6">
+        @yield('main')
+    </main>
+
+    @include('layouts.footer')
+</body>
+
+</html>
