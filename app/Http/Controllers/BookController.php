@@ -29,6 +29,8 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+
+        // dd($request);
         $validasi = $request->validate([
             'judul_buku' => 'required|string',
             'deskripsi' => 'required|string',
@@ -36,7 +38,6 @@ class BookController extends Controller
             'pengarang' => 'required|string',
             'tahun_terbit' => 'required|integer|between:1900,2040'
         ]);
-
         Book::create($validasi);
 
         return redirect()->route('books.index');
@@ -64,9 +65,11 @@ class BookController extends Controller
     public function update(Request $request, Book $book)
     {
         $val = $request->validate([
-            'name' => 'required|string',
+            'judul_buku' => 'required|string',
+            'deskripsi' => 'required|string',
             'jumlah_buku' => 'required|integer',
-            'jumlah_di_pinjam' => 'required|integer'
+            'pengarang' => 'required|string',
+            'tahun_terbit' => 'required|integer|between:1900,2040'
         ]);
 
         $book->update($val);

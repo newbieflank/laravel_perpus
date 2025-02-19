@@ -20,10 +20,10 @@
 
                                 <!-- Input Name -->
                                 <div class="mt-4">
-                                    <x-input-label for="name" :value="__('Name')" />
-                                    <x-text-input id="name" class="block mt-1 w-full" type="text" name="name"
-                                        :value="old('name')" required autofocus autocomplete="off" />
-                                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                                    <x-input-label for="judul_buku" :value="__('Judul Buku')" />
+                                    <x-text-input id="judul_buku" class="block mt-1 w-full" type="text"
+                                        name="judul_buku" :value="old('judul_buku')" required autofocus autocomplete="off" />
+                                    <x-input-error :messages="$errors->get('judul_buku')" class="mt-2" />
                                 </div>
 
                                 <div class="mt-4">
@@ -52,7 +52,7 @@
                                 </div>
 
                                 <div class="mt-4">
-                                    <x-input-label for="tahun_terbit" :value="__('Jumlah Buku')" />
+                                    <x-input-label for="tahun_terbit" :value="__('Tahun terbit')" />
                                     <x-text-input id="tahun_terbit" class="block mt-1 w-full" type="number"
                                         name="tahun_terbit" :value="old('tahun_terbit')" required min="1000" max="2100" />
                                     <x-input-error :messages="$errors->get('tahun_terbit')" class="mt-2" />

@@ -42,7 +42,7 @@
                                         <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">
                                             {{ $item->id }}</td>
                                         <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">
-                                            {{ $item->name }}</td>
+                                            {{ $item->judul_buku }}</td>
                                         <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">
                                             {{ $item->jumlah_buku }}</td>
                                         <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">
