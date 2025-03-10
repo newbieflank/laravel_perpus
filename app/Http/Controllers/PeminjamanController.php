@@ -32,7 +32,7 @@ class PeminjamanController extends Controller
      */
     public function create()
     {
-        $book = Book::all();
+        $book = Book::all(); 
         $user = member::all();
         $admin = User::all();
         return view('peminjaman.tambah', compact('book', 'user', 'admin'));
