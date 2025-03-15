@@ -26,7 +26,7 @@ class RegisterController extends Controller
             'loan' => 'required|numeric',
         ]);
 
-        $user = Register::create([
+        Register::create([
             'username' => $request->username,
             'password' => Hash::make($request->password),
             'email' => $request->email,
