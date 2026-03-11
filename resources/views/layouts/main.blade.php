@@ -10,7 +10,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ url(asset('build/assets/app-Bzu10ED2.css')) }}">
+    <link rel="stylesheet" href="{{ url(asset('build/assets/app-DqoWcmg0.css')) }}">
     <script src="{{ url(asset('build/assets/app-CAkSn3BF.js')) }}"></script>
 </head>
 
