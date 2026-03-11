@@ -34,7 +34,7 @@ node {
                 mkdir -p ~/.ssh
                 ssh-keyscan -H $PROD_HOST >> ~/.ssh/known_hosts
 
-                rsync -rav --delete ./laravel/ ubuntu@$PROD_HOST:/home/ubuntu/prod.kelasdevops.xyz/ \
+                rsync -rav --delete ./ newbieflank@$PROD_HOST:/home/newbieflank/prod.kelasdevops.xyz/ \
                 --exclude=.env \
                 --exclude=storage \
                 --exclude=.git
