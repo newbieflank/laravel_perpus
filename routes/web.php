@@ -3,6 +3,7 @@
 use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\imgUpload;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -10,12 +11,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/upload-gambar', function () {
+    return view('imgUp/imgUpload');
+});
+
+Route::post('/upload-gambar', [imgUpload::class, 'upload'])->name('upload.gambar');
+
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/daftar', [RegisterController::class, 'add'])->name('daftar');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
