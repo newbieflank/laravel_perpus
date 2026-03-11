@@ -9,6 +9,7 @@ node {
             sh '''
             apt-get update
             apt-get install -y git unzip libzip-dev curl
+
             docker-php-ext-install zip
 
             curl -sS https://getcomposer.org/installer | php
@@ -34,7 +35,8 @@ node {
                 mkdir -p ~/.ssh
                 ssh-keyscan -H $PROD_HOST >> ~/.ssh/known_hosts
 
-                rsync -rav --delete ./ newbieflank@$PROD_HOST:m6/larajenkins/
+                rsync -rav --delete ./ \
+                newbieflank@$PROD_HOST:/home/newbieflank/prod.kelasdevops.xyz/ \
                 --exclude=.env \
                 --exclude=storage \
                 --exclude=.git
