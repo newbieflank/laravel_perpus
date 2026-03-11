@@ -34,7 +34,7 @@ node {
                 mkdir -p ~/.ssh
                 ssh-keyscan -H $PROD_HOST >> ~/.ssh/known_hosts
 
-                rsync -rav --delete ./ newbieflank@$PROD_HOST:/home/newbieflank/prod.kelasdevops.xyz/ \
+                rsync -rav --delete ./ newbieflank@$PROD_HOST:m6/larajenkins/
                 --exclude=.env \
                 --exclude=storage \
                 --exclude=.git
