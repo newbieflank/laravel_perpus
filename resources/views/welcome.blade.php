@@ -3,7 +3,7 @@
 @section('main')
     <div class="page-title bg-gray-900 text-white py-12">
         <div class="container relative text-center">
-            <h1 class="text-4xl font-bold drop-shadow-lg animate-pulse">Starter Page</h1>
+            <h1 class="text-4xl font-bold drop-shadow-lg animate-pulse">Selamat Datang</h1>
             <p class="mt-2 text-gray-300 max-w-2xl mx-auto">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores expedita dolor quas ab exercitationem
                 perspiciatis, ipsa nemo qui? Laudantium quaerat tenetur repudiandae, ad dolores a, mollitia illo doloremque
