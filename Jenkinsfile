@@ -45,7 +45,8 @@ node {
                     --exclude='node_modules' \
                     --exclude='vendor' \
                     --exclude='storage' \
-                    --exclude='.git'
+                    --exclude='.git' \
+                    --exclude='.env'
                 '''
             }
         }
