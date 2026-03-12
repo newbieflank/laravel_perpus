@@ -42,7 +42,7 @@ node {
                 rsync -rav --delete ./ \
                     newbieflank@$PROD_HOST:/home/newbieflank/prod.kelasdevops.xyz/ \
                     --exclude=.env \
-                    --exclude= public \
+                    --exclude=public \
                     --exclude=storage \
                     --exclude=.git
                 '''
