@@ -35,11 +35,15 @@ node {
                 mkdir -p ~/.ssh
                 ssh-keyscan -H $PROD_HOST >> ~/.ssh/known_hosts
 
+                # Hapus cache lama supaya rsync tidak gagal
+                ssh newbieflank@$PROD_HOST "rm -f /home/newbieflank/prod.kelasdevops.xyz/bootstrap/cache/packages.php /home/newbieflank/prod.kelasdevops.xyz/bootstrap/cache/services.php"
+
+                # Jalankan rsync
                 rsync -rav --delete ./ \
-                newbieflank@$PROD_HOST:/home/newbieflank/prod.kelasdevops.xyz/ \
-                --exclude=.env \
-                --exclude=storage \
-                --exclude=.git
+                    newbieflank@$PROD_HOST:/home/newbieflank/prod.kelasdevops.xyz/ \
+                    --exclude=.env \
+                    --exclude=storage \
+                    --exclude=.git
                 '''
             }
         }
