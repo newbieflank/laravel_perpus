@@ -41,10 +41,11 @@ node {
                 # Jalankan rsync
                 rsync -rav --delete ./ \
                     newbieflank@$PROD_HOST:/home/newbieflank/prod.kelasdevops.xyz/ \
-                    --exclude=.env \
-                    --exclude=public \
-                    --exclude=storage \
-                    --exclude=.git
+                    --exclude='public/build' \
+                    --exclude='node_modules' \
+                    --exclude='vendor' \
+                    --exclude='storage' \
+                    --exclude='.git'
                 '''
             }
         }
